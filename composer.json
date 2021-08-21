@@ -1,0 +1,41 @@
+{
+    "name": "flamarkt/no-usernames",
+    "description": "Remove username from UI and forms",
+    "keywords": [
+        "flarum",
+        "username"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0",
+        "ramsey/uuid": "^4.0"
+    },
+    "authors": [
+        {
+            "name": "Flamarkt",
+            "homepage": "https://flamarkt.org/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/flamarkt/no-usernames/issues",
+        "source": "https://github.com/flamarkt/no-usernames"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "No Usernames",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-user-minus",
+                "backgroundColor": "#266a13",
+                "color": "#fff"
+            },
+            "optional-dependencies": [
+                "flamarkt/core"
+            ]
+        },
+        "flamarkt-backoffice": {
+            "showInBackoffice": true
+        }
+    }
+}

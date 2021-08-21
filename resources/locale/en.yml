@@ -1,0 +1,10 @@
+flamarkt-no-usernames:
+    admin:
+        users:
+            columns:
+                displayName: Display Name
+    forum:
+        login:
+            email: Email
+    api:
+        username-not-allowed: Username attribute is not allowed here.
