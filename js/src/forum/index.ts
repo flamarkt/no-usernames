@@ -2,11 +2,10 @@ import app from 'flarum/forum/app';
 import {extend} from 'flarum/common/extend';
 import LogInModal from 'flarum/forum/components/LogInModal';
 import SignUpModal from 'flarum/forum/components/SignUpModal';
-import ItemList from 'flarum/common/utils/ItemList';
 import extendUserEditModal from '../common/extendUserEditModal';
 
 app.initializers.add('flamarkt-no-usernames', () => {
-    extend(LogInModal.prototype, 'fields', function (items: ItemList) {
+    extend(LogInModal.prototype, 'fields', function (items) {
         // Change field type and placeholder to just "email" instead of "username or email"
         if (items.has('identification') && items.get('identification') && Array.isArray(items.get('identification').children)) {
             items.get('identification').children.forEach(vdom => {
@@ -18,7 +17,7 @@ app.initializers.add('flamarkt-no-usernames', () => {
         }
     });
 
-    extend(SignUpModal.prototype, 'fields', function (items: ItemList) {
+    extend(SignUpModal.prototype, 'fields', function (items) {
         if (items.has('username')) {
             items.remove('username');
         }

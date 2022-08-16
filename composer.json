@@ -8,8 +8,11 @@
     "type": "flarum-extension",
     "license": "MIT",
     "require": {
-        "flarum/core": "^1.0",
+        "flarum/core": "^1.2",
         "ramsey/uuid": "^4.0"
+    },
+    "require-dev": {
+        "flamarkt/backoffice": "^0.1.0"
     },
     "authors": [
         {
@@ -31,7 +34,7 @@
                 "color": "#fff"
             },
             "optional-dependencies": [
-                "flamarkt/core"
+                "flamarkt/backoffice"
             ]
         },
         "flamarkt-backoffice": {
